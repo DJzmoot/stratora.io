@@ -1,4 +1,4 @@
-import { Zap, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -46,15 +46,19 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-purple-700">
-                <Zap className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl tracking-tight">Stratora</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/stratora-logo.jpg"
+                alt="Stratora logo"
+                className="h-8 w-auto"
+              />
             </div>
+
             <p className="text-sm text-muted-foreground mb-6 max-w-xs">
-              Next-generation observability & infrastructure monitoring platform for modern cloud-native applications.
+              Next-generation observability & infrastructure monitoring platform
+              for modern cloud-native applications.
             </p>
+
             {/* Social Links */}
             <div className="flex items-center gap-3">
               {socialLinks.map((social, index) => (
@@ -96,13 +100,22 @@ export function Footer() {
             © {new Date().getFullYear()} Stratora. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              href="#"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Privacy
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              href="#"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Terms
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              href="#"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Cookies
             </a>
           </div>
