@@ -10,9 +10,7 @@ The site is built as a lightweight frontend project and is **deployed via GitHub
 
 The landing page is hosted using **GitHub Pages**:
 
-➡️ https://<your-username>.github.io/<repo-name>/
-
-(Replace with your actual GitHub Pages URL)
+➡️ https://stratora.io/
 
 ---
 
