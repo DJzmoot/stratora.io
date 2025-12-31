@@ -1,7 +1,7 @@
 
-  # SaaS Landing Page Design
+  # Stratora Landing Page Website
 
-  This is a code bundle for SaaS Landing Page Design. The original project is available at https://www.figma.com/design/mINaH9dFmu0yDvYQGoRXkS/SaaS-Landing-Page-Design.
+  This is a code bundle for Stratora Landing Page.
 
   ## Running the code
 
