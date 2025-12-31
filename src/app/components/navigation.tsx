@@ -10,7 +10,7 @@ export function Navigation() {
   <img
     src="/stratora-logo.jpg"
     alt="Stratora logo"
-    className="h-8 w-auto"
+    className="h-10 md:h-12 w-auto"
   />
 </div>
 
