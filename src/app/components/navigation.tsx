@@ -1,4 +1,4 @@
-import { Zap } from "lucide-react";
+//import { Zap } from "lucide-react";
 
 export function Navigation() {
   return (
@@ -6,12 +6,14 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-purple-700">
-              <Zap className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl tracking-tight">Stratora</span>
-          </div>
+          <div className="flex items-center">
+  <img
+    src="/stratora-logo.jpg"
+    alt="Stratora logo"
+    className="h-8 w-auto"
+  />
+</div>
+
 
           {/* Center Navigation */}
           <div className="hidden md:flex items-center gap-8">
