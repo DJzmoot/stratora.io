@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/stratora.io/',
+  base: './', // ✅ works on / and /stratora.io/
   plugins: [
     react(),
     tailwindcss(),
