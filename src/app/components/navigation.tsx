@@ -8,7 +8,7 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
   <img
-    src="/stratora-logo.jpg"
+    src="/stratora-logo-transparent.png"
     alt="Stratora logo"
     className="h-10 md:h-12 w-auto"
   />
