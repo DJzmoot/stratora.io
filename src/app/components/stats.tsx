@@ -2,26 +2,26 @@ import { motion } from "motion/react";
 
 export function Stats() {
   const stats = [
-    { value: "99.99%", label: "Uptime SLA" },
-    { value: "50B+", label: "Events / Day" },
-    { value: "<1ms", label: "Query Latency" },
-    { value: "500+", label: "Integrations" },
+    { value: "IT / OT", label: "Infrastructure coverage" },
+    { value: "22", label: "Device types supported" },
+    { value: "Template-driven", label: "Auto dashboards & config" },
+    { value: "5s", label: "Alert evaluation interval" },
   ];
 
   return (
-    <section className="relative px-6 py-20">
+    <section className="relative px-6 py-12">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((stat, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={stat.label}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              className="space-y-2"
             >
-              <div className="text-4xl md:text-5xl mb-2 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+              <div className="text-3xl md:text-5xl bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
