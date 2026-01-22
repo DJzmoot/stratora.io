@@ -4,53 +4,61 @@ import { motion } from "motion/react";
 export function Pricing() {
   const plans = [
     {
-      name: "Starter",
+      name: "Community Edition",
       price: "Free",
       period: "forever",
-      description: "Perfect for small projects and testing",
+      description: "Full-featured monitoring for labs and small environments",
       features: [
-        "Up to 1M events/month",
-        "7-day data retention",
-        "5 team members",
-        "Basic dashboards",
-        "Email support",
-        "Community access",
+        "Full Stratora monitoring platform",
+        "Metrics, logs, and events",
+        "SNMP, ICMP, HTTP / HTTPS monitoring",
+        "Windows Agent",
+        "Linux Agent",
+        "Dashboards, alerts, and templates",
+        "Distributed collectors",
+        "Role-based access control (RBAC)",
+        "Local authentication",
+        "LDAP / Active Directory authentication",
+        "Up to 100 monitored nodes",
+        "Community updates & documentation",
       ],
-      cta: "Start Free",
+      cta: "Get Started Free",
       highlighted: false,
     },
     {
       name: "Pro",
-      price: "$99",
-      period: "per month",
-      description: "For growing teams and production workloads",
+      price: "$500",
+      period: "starting at / month",
+      description: "Production-ready monitoring for real environments",
       features: [
-        "Up to 100M events/month",
-        "90-day data retention",
-        "Unlimited team members",
-        "Custom dashboards",
-        "APM & distributed tracing",
+        "Full Stratora platform (no feature restrictions)",
+        "Up to 500 monitored nodes",
+        "Higher ingestion limits",
+        "Extended data retention",
+        "Unlimited dashboards and alerts",
+        "Advanced alerting & escalation",
+        "OAuth / SSO with MFA support (Entra ID, Okta, OIDC)",
         "Priority support",
-        "Advanced alerting",
-        "SLA: 99.9% uptime",
+        "Additional node tiers available (contact sales)",
       ],
-      cta: "Start Trial",
-      highlighted: true,
+      cta: "Start Free Trial",
+      highlighted: false,
     },
     {
       name: "Enterprise",
       price: "Custom",
-      period: "contact us",
-      description: "For large-scale operations",
+      period: "contact sales",
+      description: "Unlimited scale, security, and control",
       features: [
-        "Unlimited events",
-        "Custom data retention",
-        "Dedicated infrastructure",
-        "White-label options",
-        "24/7 phone support",
+        "Unlimited monitored nodes",
+        "Custom data retention policies",
+        "Dedicated or isolated infrastructure",
+        "Advanced security and compliance controls",
+        "Enterprise SSO with enforced MFA",
+        "White-labeling (optional)",
         "Custom integrations",
-        "Advanced security",
-        "SLA: 99.99% uptime",
+        "Architecture & onboarding assistance",
+        "24×7 support with SLAs",
       ],
       cta: "Contact Sales",
       highlighted: false,
@@ -72,7 +80,7 @@ export function Pricing() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that fits your needs. All plans include a 14-day free trial.
+            Same platform. Same features. Scale by node count.
           </p>
         </motion.div>
 
@@ -105,7 +113,17 @@ interface PricingCardProps {
   highlighted: boolean;
 }
 
-function PricingCard({ name, price, period, description, features, cta, highlighted }: PricingCardProps) {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  cta,
+  highlighted,
+}: PricingCardProps) {
+  const isMonthly = price !== "Custom" && price !== "Free";
+
   return (
     <div
       className={`relative rounded-2xl border p-8 transition-all h-full flex flex-col ${
@@ -141,7 +159,7 @@ function PricingCard({ name, price, period, description, features, cta, highligh
           <span className="text-4xl md:text-5xl bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
             {price}
           </span>
-          {price !== "Custom" && price !== "Free" && (
+          {isMonthly && (
             <span className="text-muted-foreground text-sm">/ month</span>
           )}
         </div>
