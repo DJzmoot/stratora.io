@@ -20,31 +20,31 @@ export function Features() {
       icon: Radar,
       title: "Template-driven monitoring",
       description:
-        "Deploy consistent monitoring fast with device templates for switches, firewalls, APs, servers, NAS, ping, and HTTP/HTTPS.",
+        "Deploy consistent monitoring fast with device templates for switches, firewalls, APs, servers, SAN/NAS, Power/UPS/Environmental Monitoring, PING, and HTTP/HTTPS, and more.",
     },
     {
       icon: Network,
       title: "Distributed collectors",
       description:
-        "Telegraf-based collectors with automatic config generation for scalable, segmented environments.",
+        "Easy to install Stratora collectors with automatic config generation for scalable, segmented environments.",
     },
     {
       icon: Cpu,
       title: "Windows & Linux agents",
       description:
-        "Lightweight agents for server monitoring. Windows includes auto-registration, role detection, and service monitoring.",
+        "Lightweight Stratora agents for server monitoring, including auto-registration, admin approval, server role detection, and service monitoring.",
     },
     {
       icon: Bell,
       title: "Alerting + maintenance mode",
       description:
-        "Actionable alerting with acknowledge/mute, deduplication, and scheduled maintenance windows with suppression.",
+        "Automated alerting with scheduled escalation teams and on-call routing. Notify the right people via email, Microsoft Teams, Slack, SMS, or phone calls — with acknowledge, mute, and maintenance-aware suppression.",
     },
     {
       icon: ShieldCheck,
       title: "RBAC + LDAP authentication",
       description:
-        "Built-in roles (Admin/Operator/Viewer) with local accounts and Active Directory pass-through + group-to-role mapping.",
+        "Built-in roles (Admin/Operator/Viewer) with local accounts and Active Directory pass-through + group-to-role mapping. No stored credentials required.",
     },
   ];
 
