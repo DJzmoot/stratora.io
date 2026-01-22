@@ -1,44 +1,56 @@
-import { Server, Search, Activity, Bell, LayoutDashboard, ShieldCheck } from "lucide-react";
+import {
+  Network,
+  LayoutGrid,
+  Radar,
+  Cpu,
+  Bell,
+  ShieldCheck,
+} from "lucide-react";
 import { motion } from "motion/react";
 
 export function Features() {
   const features = [
     {
-      icon: Server,
-      title: "Infrastructure Monitoring",
-      description: "Real-time servers, containers, cloud resources",
+      icon: LayoutGrid,
+      title: "Visualization-first dashboards",
+      description:
+        "Interactive port grids, gauges, charts, tables, and status heatmaps — driven by live metrics.",
     },
     {
-      icon: Search,
-      title: "Log Management",
-      description: "Centralized log search & analytics",
+      icon: Radar,
+      title: "Template-driven monitoring",
+      description:
+        "Deploy consistent monitoring fast with device templates for switches, firewalls, APs, servers, NAS, ping, and HTTP/HTTPS.",
     },
     {
-      icon: Activity,
-      title: "APM & Tracing",
-      description: "Distributed tracing across microservices",
+      icon: Network,
+      title: "Distributed collectors",
+      description:
+        "Telegraf-based collectors with automatic config generation for scalable, segmented environments.",
+    },
+    {
+      icon: Cpu,
+      title: "Windows & Linux agents",
+      description:
+        "Lightweight agents for server monitoring. Windows includes auto-registration, role detection, and service monitoring.",
     },
     {
       icon: Bell,
-      title: "Smart Alerting",
-      description: "AI-powered noise-reducing alerts",
-    },
-    {
-      icon: LayoutDashboard,
-      title: "Custom Dashboards",
-      description: "Drag-and-drop visualizations",
+      title: "Alerting + maintenance mode",
+      description:
+        "Actionable alerting with acknowledge/mute, deduplication, and scheduled maintenance windows with suppression.",
     },
     {
       icon: ShieldCheck,
-      title: "Security Monitoring",
-      description: "Real-time threat detection & compliance",
+      title: "RBAC + LDAP authentication",
+      description:
+        "Built-in roles (Admin/Operator/Viewer) with local accounts and Active Directory pass-through + group-to-role mapping.",
     },
   ];
 
   return (
     <section id="features" className="relative px-6 py-20">
       <div className="container mx-auto">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,52 +59,33 @@ export function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl mb-4">
-            Everything You Need to Monitor & Debug
+            Everything you need to monitor IT / OT infrastructure
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A complete observability platform designed for modern cloud-native applications.
+            Real-time metrics, template-driven onboarding, distributed collectors,
+            and dashboards built for operators.
           </p>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((f, i) => (
             <motion.div
-              key={index}
+              key={f.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
+              className="rounded-2xl border border-border/50 bg-card/50 p-8 hover:border-purple-500/30 transition-all"
             >
-              <FeatureCard {...feature} />
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10">
+                <f.icon className="h-5 w-5 text-purple-400" />
+              </div>
+              <h3 className="text-lg mb-2">{f.title}</h3>
+              <p className="text-sm text-muted-foreground">{f.description}</p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-interface FeatureCardProps {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-}
-
-function FeatureCard({ icon: Icon, title, description }: FeatureCardProps) {
-  return (
-    <div className="group relative rounded-xl border border-border/50 bg-card/50 p-6 hover:border-purple-500/50 transition-all">
-      {/* Glow effect on hover */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/0 to-purple-800/0 group-hover:from-purple-600/20 group-hover:to-purple-800/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
-      
-      {/* Icon */}
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 transition-colors">
-        <Icon className="h-6 w-6" />
-      </div>
-
-      {/* Content */}
-      <h3 className="mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
   );
 }
