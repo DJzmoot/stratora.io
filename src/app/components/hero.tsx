@@ -57,7 +57,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="mb-10 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Monitor your entire infrastructure with real-time metrics, logs, and distributed tracing. 
+            Hundreds of devices monitored in minutes, with immediate real-time visibility, automated actionable dashboards, and easy alert escalation into your favorite chat/email/ticketing platforms + SMS & phone calls.
             One platform to rule them all.
           </motion.p>
 
