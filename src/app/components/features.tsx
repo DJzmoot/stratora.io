@@ -14,7 +14,7 @@ export function Features() {
       icon: LayoutGrid,
       title: "Visualization-first dashboards",
       description:
-        "Interactive port grids, gauges, charts, tables, and status heatmaps — driven by live metrics.",
+        "Interactive port grids, gauges, charts, tables, and status heatmaps — all driven by live metrics. Automatically generated dashboards provide consistent site-wide and infrastructure-specific views out of the box.",
     },
     {
       icon: Radar,
@@ -42,9 +42,9 @@ export function Features() {
     },
     {
       icon: ShieldCheck,
-      title: "RBAC + LDAP authentication",
+      title: "RBAC + LDAP/OAUTH SSO authentication",
       description:
-        "Built-in roles (Admin/Operator/Viewer) with local accounts and Active Directory pass-through + group-to-role mapping. No stored credentials required.",
+        "Built-in role-based access control with local accounts and identity provider pass-through (Active Directory, LDAP, Entra ID, Okta, OAuth/OIDC), including group-to-role mapping. No credentials stored.",
     },
   ];
 
