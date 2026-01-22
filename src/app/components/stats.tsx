@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 
 export function Stats() {
   const stats = [
-    { value: "IT / OT", label: "Infrastructure Observability" },
+    { value: "IT / OT", label: "Full-Stack Infrastructure Observability" },
     { value: "100+", label: "Vendors/Device types supported and counting" },
     { value: "Template-driven", label: "Automated dashboards & config creation" },
-    { value: "Agent + Agentless", label: "Distributed collector-based monitoring" },
+    { value: "Agent/Collector", label: "Distributed agent & collector-based monitoring" },
   ];
 
   return (
