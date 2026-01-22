@@ -57,9 +57,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="mb-10 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Hundreds of devices monitored in minutes, with immediate real-time visibility, automated actionable dashboards, and easy alert escalation into your favorite chat/email/ticketing platforms + SMS and phone calls.
-            
-            One platform to rule them all.
+            Monitor hundreds of devices in minutes with immediate, real-time visibility, automated dashboards, and built-in alert escalation across chat, email, SMS, and phone.
           </motion.p>
 
           {/* CTA Buttons */}
