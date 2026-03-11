@@ -1,4 +1,4 @@
-import { Play } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Hero() {
@@ -68,12 +68,12 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button className="rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-8 py-3 text-white hover:from-purple-700 hover:to-purple-800 transition-all shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50">
-              Start Free Trial
+              Download Free
             </button>
-            <button className="rounded-full border border-border px-8 py-3 text-foreground hover:bg-secondary transition-all flex items-center gap-2">
-              <Play className="h-4 w-4" />
-              Watch Demo
-            </button>
+            <a href="https://docs.stratora.io" target="_blank" rel="noopener noreferrer" className="rounded-full border border-border px-8 py-3 text-foreground hover:bg-secondary transition-all flex items-center gap-2">
+              <ExternalLink className="h-4 w-4" />
+              View Documentation
+            </a>
           </motion.div>
         </div>
       </div>

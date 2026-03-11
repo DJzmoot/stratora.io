@@ -47,16 +47,16 @@ export function DashboardPreview() {
 
           {/* Metric Tiles */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <MetricTile 
-              label="Requests/sec" 
-              value="24.5k" 
-              change="+12.3%" 
+            <MetricTile
+              label="Interface Utilization"
+              value="24.5k"
+              change="+12.3%"
               isPositive={true}
             />
-            <MetricTile 
-              label="Avg Latency to AWS" 
-              value="47ms" 
-              change="-8.2%" 
+            <MetricTile
+              label="Ping Latency (ms)"
+              value="47ms"
+              change="-8.2%"
               isPositive={true}
             />
             <MetricTile 
@@ -82,7 +82,7 @@ export function DashboardPreview() {
           {/* Full Width Chart */}
           <div className="mt-6">
             <MiniChart 
-              title="Branch Offices SD-WAN Packet Loss" 
+              title="Packet Loss %"
               data={packetLossData} 
               color="#c084fc" 
               unit="%" 

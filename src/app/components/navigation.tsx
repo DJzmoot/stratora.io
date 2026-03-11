@@ -1,37 +1,41 @@
-//import { Zap } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export function Navigation() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const links = [
+    { label: "Home", href: "#" },
+    { label: "Features", href: "#features" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#" },
+  ];
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-  <img
-    src="/stratora-logo-transparent.png"
-    alt="Stratora logo"
-    className="h-10 md:h-12 w-auto"
-  />
-</div>
+            <img
+              src="/stratora-logo-transparent.png"
+              alt="Stratora logo"
+              className="h-10 md:h-12 w-auto"
+            />
+          </div>
 
-
-          {/* Center Navigation */}
+          {/* Center Navigation (desktop) */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Home
-            </a>
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Features
-            </a>
-            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
-            </a>
-            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              About
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Contact
-            </a>
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           {/* Right Side */}
@@ -39,12 +43,49 @@ export function Navigation() {
             <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Sign In
             </a>
-            <button className="rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-2 text-sm text-white hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg shadow-purple-500/20">
+            <button className="hidden md:block rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-2 text-sm text-white hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg shadow-purple-500/20">
               Get Started
+            </button>
+
+            {/* Mobile hamburger */}
+            <button
+              className="md:hidden flex items-center justify-center"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? (
+                <X className="h-6 w-6 text-foreground" />
+              ) : (
+                <Menu className="h-6 w-6 text-foreground" />
+              )}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-lg">
+          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+              >
+                {link.label}
+              </a>
+            ))}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-2 text-sm text-white hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg shadow-purple-500/20 mt-2"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
