@@ -43,6 +43,7 @@ export function Pricing() {
       cta: "Get Started with Pro",
       href: PRO_ANNUAL_LINK,
       highlighted: true,
+      helperText: true,
     },
     {
       name: "Enterprise",
@@ -111,6 +112,7 @@ interface PricingCardProps {
   cta: string;
   href: string;
   highlighted: boolean;
+  helperText?: boolean;
 }
 
 function PricingCard({
@@ -123,6 +125,7 @@ function PricingCard({
   cta,
   href,
   highlighted,
+  helperText,
 }: PricingCardProps) {
   return (
     <div
@@ -189,6 +192,20 @@ function PricingCard({
       >
         {cta}
       </a>
+
+      {helperText && (
+        <p className="text-xs text-muted-foreground text-center mt-3">
+          Need more nodes? Add 250-node expansion packs at checkout or anytime
+          via the{" "}
+          <a
+            href="/billing"
+            className="text-purple-400 hover:text-purple-300 transition-colors"
+          >
+            billing portal
+          </a>
+          .
+        </p>
+      )}
     </div>
   );
 }
