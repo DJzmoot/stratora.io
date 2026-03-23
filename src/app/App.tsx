@@ -7,19 +7,30 @@ import { Pricing } from "./components/pricing";
 import { Downloads } from "./components/downloads";
 import { About } from "./components/about";
 import { Footer } from "./components/footer";
+import { Billing } from "./components/billing";
+
+function LandingPage() {
+  return (
+    <>
+      <Hero />
+      <DashboardPreview />
+      <Stats />
+      <Features />
+      <Pricing />
+      <Downloads />
+      <About />
+    </>
+  );
+}
 
 export default function App() {
+  const isBilling = window.location.pathname === "/billing";
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Navigation />
       <main>
-        <Hero />
-        <DashboardPreview />
-        <Stats />
-        <Features />
-        <Pricing />
-        <Downloads />
-        <About />
+        {isBilling ? <Billing /> : <LandingPage />}
       </main>
       <Footer />
     </div>

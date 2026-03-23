@@ -10,6 +10,7 @@ export function Navigation() {
     { label: "Pricing", href: "#pricing" },
     { label: "Downloads", href: "#downloads" },
     { label: "About", href: "#about" },
+    { label: "Billing", href: "/billing" },
     { label: "Contact", href: "#" },
   ];
 
