@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
       
-      {/* Vertical light streaks (slightly toned down) */}
+      {/* Vertical light streaks (subtle) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
           initial={{ opacity: 0, y: -100 }}
@@ -33,11 +33,10 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-6 text-5xl md:text-7xl tracking-tight"
           >
-            From install to{" "}
+            Infrastructure monitoring, alerting, and visibility —{" "}
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-              live dashboards
-            </span>{" "}
-            in minutes — not days of setup and tuning
+              deployed in minutes
+            </span>
           </motion.h1>
 
           {/* Subheading */}
@@ -50,14 +49,14 @@ export function Hero() {
             Automatically discover your environment, generate dashboards, and start monitoring immediately — with built-in alerting, topology maps, and documentation for IT and OT systems.
           </motion.p>
 
-          {/* Proof line (moved up) */}
+          {/* Proof line */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="mb-10 text-sm md:text-base text-muted-foreground"
           >
-            ⚡ From install → discovery → live dashboards in ~5 minutes. No consultants. No tuning.
+            ⚡ From install → discovery → full visibility in ~5 minutes. No consultants. No tuning.
           </motion.p>
 
           {/* CTA Buttons */}
