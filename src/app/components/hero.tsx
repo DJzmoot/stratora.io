@@ -44,10 +44,11 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-6 text-5xl md:text-7xl tracking-tight"
           >
-            Observability at{" "}
+            From install to{" "}
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-              Light Speed
+              live dashboards
             </span>
+            {" "}in minutes
           </motion.h1>
 
           {/* Subheading */}
@@ -57,7 +58,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="mb-10 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Monitor hundreds of devices in minutes with immediate, real-time visibility, automated dashboards, and built-in alert escalation across chat, email, SMS, and phone.
+            Monitor hundreds of devices with auto-discovery, automated dashboards, and built-in alert escalation across email, Teams, Slack, SMS, and voice — deployed on your infrastructure, no cloud required.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -74,6 +75,26 @@ export function Hero() {
               <ExternalLink className="h-4 w-4" />
               View Documentation
             </a>
+          </motion.div>
+
+          {/* Proof strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="border-t border-border/30 pt-12 mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center"
+          >
+            {[
+              { label: 'Deploy in minutes', desc: 'Windows Server 2022, no prerequisites' },
+              { label: 'Auto-discovers devices', desc: 'SNMP, agents, and ping — no manual config' },
+              { label: 'Dashboards generated', desc: 'Automatically built from live data' },
+              { label: 'Alerts from day one', desc: 'Email, Teams, Slack, SMS, and voice' },
+            ].map((item) => (
+              <div key={item.label} className="flex flex-col items-center gap-1">
+                <span className="text-sm font-semibold text-foreground">{item.label}</span>
+                <span className="text-xs text-muted-foreground">{item.desc}</span>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>
