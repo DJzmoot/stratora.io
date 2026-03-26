@@ -1,4 +1,4 @@
-import { Github, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 function navigate(href: string) {
   window.history.pushState(null, "", href);
@@ -11,15 +11,13 @@ export function Footer() {
       { name: "Features", href: "/#features" },
       { name: "Pricing", href: "/#pricing" },
       { name: "Downloads", href: "/#downloads" },
-      { name: "Changelog", href: "https://github.com/Stratora-Platforms/stratora/releases", external: true },
+      { name: "Changelog", href: "/#downloads" },
     ],
     Company: [
       { name: "About", href: "/#about" },
-      { name: "GitHub", href: "https://github.com/Stratora-Platforms/stratora", external: true },
     ],
     Resources: [
       { name: "Documentation", href: "https://docs.stratora.io", external: true },
-      { name: "Release Notes", href: "https://github.com/Stratora-Platforms/stratora/releases", external: true },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy-policy", internal: true },
@@ -28,7 +26,6 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/Stratora-Platforms/stratora", label: "GitHub" },
     { icon: Mail, href: "mailto:support@stratora.io", label: "Email" },
   ];
 

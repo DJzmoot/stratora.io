@@ -31,7 +31,7 @@ export function Pricing() {
     {
       name: "Pro",
       price: "$3,000",
-      priceSuffix: "/ yr",
+      priceSuffix: "/ year",
       period: "billed annually",
       description: "Production-ready monitoring for real environments",
       features: [
@@ -47,9 +47,9 @@ export function Pricing() {
     },
     {
       name: "Enterprise",
-      price: "Custom",
+      price: "Enterprise Pricing",
       priceSuffix: "",
-      period: "contact us",
+      period: "Volume discounts available",
       description: "Monitoring at any scale with dedicated support",
       features: [
         "Unlimited nodes",
@@ -170,7 +170,7 @@ function PricingCard({
       </div>
 
       {/* Features */}
-      <ul className="space-y-3 mb-8 flex-grow">
+      <ul className="space-y-3 flex-grow">
         {features.map((feature, i) => (
           <li key={i} className="flex items-start gap-3">
             <Check className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
@@ -180,37 +180,38 @@ function PricingCard({
       </ul>
 
       {/* CTA Button */}
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`w-full rounded-full py-3 transition-all text-center block ${
-          highlighted
-            ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white hover:from-purple-700 hover:to-purple-800 shadow-lg shadow-purple-500/30"
-            : "border border-border text-foreground hover:bg-secondary"
-        }`}
-      >
-        {cta}
-      </a>
-
-      {helperText && (
-        <p className="text-xs text-muted-foreground text-center mt-3">
-          Need more nodes? Add 250-node expansion packs at checkout or anytime
-          via the{" "}
-          <a
-            href="/billing"
-            onClick={(e) => {
-              e.preventDefault();
-              window.history.pushState(null, "", "/billing");
-              window.dispatchEvent(new PopStateEvent("popstate"));
-            }}
-            className="text-purple-400 hover:text-purple-300 transition-colors"
-          >
-            billing portal
-          </a>
-          .
-        </p>
-      )}
+      <div className="mt-auto">
+        {helperText && (
+          <p className="text-xs text-muted-foreground text-center mb-3">
+            Need more nodes? Add 250-node expansion packs at checkout or anytime
+            via the{" "}
+            <a
+              href="/billing"
+              onClick={(e) => {
+                e.preventDefault();
+                window.history.pushState(null, "", "/billing");
+                window.dispatchEvent(new PopStateEvent("popstate"));
+              }}
+              className="text-purple-400 hover:text-purple-300 transition-colors"
+            >
+              billing portal
+            </a>
+            .
+          </p>
+        )}
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`w-full rounded-full py-3 transition-all text-center block ${
+            highlighted
+              ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white hover:from-purple-700 hover:to-purple-800 shadow-lg shadow-purple-500/30"
+              : "border border-border text-foreground hover:bg-secondary"
+          }`}
+        >
+          {cta}
+        </a>
+      </div>
     </div>
   );
 }

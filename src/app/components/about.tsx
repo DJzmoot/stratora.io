@@ -17,7 +17,7 @@ export function About() {
           </div>
 
           {/* Content */}
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-muted-foreground leading-relaxed text-center">
             <p>
               Stratora was built by engineers who have lived through the pain of fragmented monitoring stacks, noisy alerts, and dashboards that look impressive but answer nothing when things break.
             </p>
