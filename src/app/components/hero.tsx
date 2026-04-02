@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
+import { MSI_DOWNLOAD_URL } from "../constants";
 
 export function Hero() {
   return (
@@ -33,9 +34,9 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-6 text-5xl md:text-7xl tracking-tight"
           >
-            Infrastructure monitoring, alerting, and visibility —{" "}
+            Infrastructure monitoring, alerting, and visibility{" "}
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-              deployed in minutes
+              deployed in minutes — not days.
             </span>
           </motion.h1>
 
@@ -67,7 +68,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a 
-              href="https://github.com/Stratora-Platforms/stratora/releases/download/v2.1.0/Stratora-Server-2.1.0.msi" 
+              href={MSI_DOWNLOAD_URL}
               target="_blank" 
               rel="noopener noreferrer" 
               className="rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-8 py-3 text-white hover:from-purple-700 hover:to-purple-800 transition-all shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50"

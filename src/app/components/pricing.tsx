@@ -1,8 +1,6 @@
 import { Check, Zap } from "lucide-react";
 import { motion } from "motion/react";
-
-const DOWNLOAD_URL =
-  "https://github.com/Stratora-Platforms/stratora/releases/download/v2.1.0/Stratora-Server-2.1.0.msi";
+import { MSI_DOWNLOAD_URL } from "../constants";
 
 const PRO_ANNUAL_LINK =
   "https://buy.stripe.com/4gM3cx0jTe28gyC2OYefC04";
@@ -25,7 +23,7 @@ export function Pricing() {
         "Community support",
       ],
       cta: "Download Free",
-      href: DOWNLOAD_URL,
+      href: MSI_DOWNLOAD_URL,
       highlighted: false,
     },
     {

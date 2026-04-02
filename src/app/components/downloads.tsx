@@ -1,8 +1,6 @@
 import { Download, ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
-
-const RELEASE_VERSION = "2.1.0";
-const MSI_URL = `https://github.com/Stratora-Platforms/stratora/releases/download/v${RELEASE_VERSION}/Stratora-Server-${RELEASE_VERSION}.msi`;
+import { RELEASE_VERSION, MSI_DOWNLOAD_URL } from "../constants";
 const RELEASE_NOTES_URL = "https://github.com/Stratora-Platforms/stratora/releases";
 
 export function Downloads() {
@@ -43,7 +41,7 @@ export function Downloads() {
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
               <a
-                href={MSI_URL}
+                href={MSI_DOWNLOAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-2.5 text-sm text-white hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg shadow-purple-500/20"
