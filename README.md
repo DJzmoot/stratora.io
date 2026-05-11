@@ -2,7 +2,7 @@
 
 This repository contains the **static landing page** for **Stratora**, a modern infrastructure monitoring and observability platform.
 
-The site is built as a lightweight frontend project and is **deployed via GitHub Pages**. It is intended for marketing, product overview, and early-access interest — **not** for running the Stratora application itself.
+The site is built as a lightweight frontend project and is **deployed via GitHub Pages**. It is the marketing site for the shipping product — **not** for running the Stratora application itself.
 
 ---
 

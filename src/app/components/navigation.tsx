@@ -14,6 +14,7 @@ export function Navigation() {
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
     { label: "Downloads", href: "#downloads" },
+    { label: "Docs", href: "https://docs.stratora.io" },
     { label: "About", href: "#about" },
     { label: "Billing", href: "/billing" },
     { label: "Contact", href: "mailto:support@stratora.io" },

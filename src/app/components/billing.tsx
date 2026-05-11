@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { motion } from "motion/react";
-
-const PORTAL_ENDPOINT =
-  "https://stratora-licensing-production.stratora.workers.dev/api/v1/portal";
+import { BILLING_PORTAL_ENDPOINT } from "../constants";
 
 export function Billing() {
   const [email, setEmail] = useState("");
@@ -23,7 +21,7 @@ export function Billing() {
     setLoading(true);
 
     try {
-      const res = await fetch(PORTAL_ENDPOINT, {
+      const res = await fetch(BILLING_PORTAL_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed }),

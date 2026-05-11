@@ -18,6 +18,7 @@ export function Footer() {
     ],
     Resources: [
       { name: "Documentation", href: "https://docs.stratora.io", external: true },
+      { name: "Twilio Setup", href: "https://docs.stratora.io/docs/integrations/external-notifications", external: true },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy-policy", internal: true },

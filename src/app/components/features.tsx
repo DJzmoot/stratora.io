@@ -24,9 +24,9 @@ export function Features() {
     },
     {
       icon: Network,
-      title: "Distributed collectors",
+      title: "Distributed collectors for segmented networks",
       description:
-        "Easy to install Stratora collectors with automatic config generation for scalable, segmented environments.",
+        "Deploy Stratora collectors into segmented IT and OT zones with automatic config generation. Day-1 protocols: SNMP, ping, HTTP/HTTPS, and agent telemetry — protocol-agnostic monitoring of OT-zone infrastructure (managed switches, HMIs, historians). OT-specific protocols and vendor templates on the roadmap.",
     },
     {
       icon: Cpu,

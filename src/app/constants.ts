@@ -2,3 +2,7 @@
 export const RELEASE_VERSION = "2.1.9.2";
 export const MSI_DOWNLOAD_URL = `https://github.com/Stratora-Platforms/stratora-releases/releases/download/v${RELEASE_VERSION}/Stratora-Server-${RELEASE_VERSION}.msi`;
 export const RELEASE_NOTES_URL = `https://github.com/Stratora-Platforms/stratora-releases/releases/tag/v${RELEASE_VERSION}`;
+
+// Stripe Worker billing-portal endpoint (managed via the Cloudflare Worker in stratora-licensing/)
+export const BILLING_PORTAL_ENDPOINT =
+  "https://stratora-licensing-production.stratora.workers.dev/api/v1/portal";

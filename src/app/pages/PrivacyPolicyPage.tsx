@@ -22,7 +22,7 @@ export function PrivacyPolicyPage() {
       <main className="max-w-3xl mx-auto px-6 py-24">
         <h1 className="text-3xl font-bold mb-4">Stratora Privacy Policy</h1>
         <p className="text-muted-foreground mb-10">
-          <strong>Last updated:</strong> March 25, 2026
+          <strong>Last updated:</strong> May 11, 2026
         </p>
 
         {/* Intro */}
