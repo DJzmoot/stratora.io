@@ -42,9 +42,9 @@ export function Features() {
     },
     {
       icon: ShieldCheck,
-      title: "RBAC + LDAP/OAUTH SSO authentication",
+      title: "RBAC + LDAP/OIDC SSO authentication",
       description:
-        "Built-in role-based access control with local accounts and identity provider pass-through (Active Directory, LDAP, Entra ID, Okta, OAuth/OIDC), including group-to-role mapping. No credentials stored.",
+        "Built-in role-based access control with local accounts and identity provider pass-through (Active Directory, LDAP, Entra ID, and any OIDC-compliant provider), including group-to-role mapping. No credentials stored.",
     },
   ];
 
